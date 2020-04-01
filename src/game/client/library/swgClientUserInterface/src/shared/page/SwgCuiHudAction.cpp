@@ -104,8 +104,8 @@
 #include "swgClientUserInterface/SwgCuiQuestHelper.h"
 #include "swgClientUserInterface/SwgCuiResourceExtraction.h"
 #include "swgClientUserInterface/SwgCuiSpaceConversation.h"
-#include "swgClientUserInterface/SwgCuiTcgManager.h"
-#include "swgClientUserInterface/SwgCuiTcgWindow.h"
+//#include "swgClientUserInterface/SwgCuiTcgManager.h"
+//#include "swgClientUserInterface/SwgCuiTcgWindow.h"
 #include "swgClientUserInterface/SwgCuiToolbar.h"
 #include "swgClientUserInterface/SwgCuiWebBrowserManager.h"
 #include "swgClientUserInterface/SwgCuiVoiceFlyBar.h"
@@ -253,7 +253,7 @@ m_toggleDownTimeNames          (0.0f)
 	CuiActionManager::addAction (CuiActions::notepad,                    this, false);
 	CuiActionManager::addAction (CuiActions::setName,                    this, false);
 
-	CuiActionManager::addAction (CuiActions::ticketSubmission,           this, false);
+	//CuiActionManager::addAction (CuiActions::ticketSubmission,           this, false);
 	CuiActionManager::addAction (CuiActions::harassmentMessage,          this, false);
 	CuiActionManager::addAction (CuiActions::harassmentMessageFromKBSearch,this, false);
 	CuiActionManager::addAction (CuiActions::manageShipComponents,       this, false);
@@ -285,7 +285,7 @@ m_toggleDownTimeNames          (0.0f)
 	CuiActionManager::addAction(CuiActions::sendSavedPlayerInterestsToServer, this, false);
 	CuiActionManager::addAction (SwgCuiActions::toggleVoiceFlyBar, this, false);
 
-	CuiActionManager::addAction (CuiActions::tcg, this, false);
+	//CuiActionManager::addAction (CuiActions::tcg, this, false);
 
 	CuiActionManager::addAction (CuiActions::appearanceTab, this, false);
 
@@ -1186,10 +1186,10 @@ bool  SwgCuiHudAction::performAction (const std::string & id, const Unicode::Str
 		SwgCuiWebBrowserManager::setURL(finalUrl.c_str(), true);
 	}
 
-	else if (id == CuiActions::ticketSubmission) // Ticket Submission tabbed form
-	{
-		m_mediator.m_windowManager->spawnTicketSubmission();
-	}
+//	else if (id == CuiActions::ticketSubmission) // Ticket Submission tabbed form
+	//{
+	//	m_mediator.m_windowManager->spawnTicketSubmission();
+	//}
 
 	else if (id == CuiActions::harassmentMessage) // Message displayed prior to a harrassment report
 	{
@@ -1593,22 +1593,22 @@ bool  SwgCuiHudAction::performAction (const std::string & id, const Unicode::Str
 	{
 		CuiMediatorFactory::toggleInWorkspace(CuiMediatorTypes::WS_VoiceActiveSpeakers);
 	}
-	else if (id == CuiActions::tcg)
-	{
-		SwgCuiTcgWindow * tcgWindow = safe_cast<SwgCuiTcgWindow * >(CuiMediatorFactory::getInWorkspace(CuiMediatorTypes::WS_TcgWindow, false, false, false));
+//	else if (id == CuiActions::tcg)
+	//{
+	//	SwgCuiTcgWindow * tcgWindow = safe_cast<SwgCuiTcgWindow * >(CuiMediatorFactory::getInWorkspace(CuiMediatorTypes::WS_TcgWindow, false, false, false));
 
-		if (tcgWindow && tcgWindow->isActive())
-		{
-			CuiMediatorFactory::deactivateInWorkspace(CuiMediatorTypes::WS_TcgWindow);
-		}
-		else
-		{
-			SwgCuiTcgManager::setLoginInfo(GameNetwork::getUserName().c_str(), CuiLoginManager::getSessionIdKey(true));
-			SwgCuiTcgManager::launch();
-
-			tcgWindow = safe_cast<SwgCuiTcgWindow * >(CuiMediatorFactory::activateInWorkspace(CuiMediatorTypes::WS_TcgWindow, false, false));
-		}
-	}
+	//	if (tcgWindow && tcgWindow->isActive())
+	//	{
+	//		CuiMediatorFactory::deactivateInWorkspace(CuiMediatorTypes::WS_TcgWindow);
+	//	}
+	//	else
+	//	{
+	//		SwgCuiTcgManager::setLoginInfo(GameNetwork::getUserName().c_str(), CuiLoginManager::getSessionIdKey(true));
+	//		SwgCuiTcgManager::launch();
+	//
+	//		tcgWindow = safe_cast<SwgCuiTcgWindow * >(CuiMediatorFactory::activateInWorkspace(CuiMediatorTypes::WS_TcgWindow, false, false));
+	//	}
+	//}
 	else if (id == CuiActions::appearanceTab)
 	{
 		CuiMediatorFactory::toggleInWorkspace(CuiMediatorTypes::WS_AppearanceTab);

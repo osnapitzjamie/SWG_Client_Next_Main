@@ -68,7 +68,7 @@
 #include "swgClientUserInterface/SwgCuiQuestHelper.h"
 #include "swgClientUserInterface/SwgCuiServerData.h"
 #include "swgClientUserInterface/SwgCuiStatusGround.h"
-#include "swgClientUserInterface/SwgCuiTcgManager.h"
+//#include "swgClientUserInterface/SwgCuiTcgManager.h"
 #include "swgClientUserInterface/SwgCuiWebBrowserManager.h"
 
 // ======================================================================
@@ -472,7 +472,7 @@ void SwgCuiManager::install ()
 	SwgCuiAvatarCreationHelper::install();
 	SwgCuiQuestHelper::install();
 	SwgCuiWebBrowserManager::install();
-	SwgCuiTcgManager::install();
+	//SwgCuiTcgManager::install();
 
 	s_receiver = new Listener;
 
@@ -501,7 +501,7 @@ void SwgCuiManager::remove ()
 	s_receiver = 0;
 	
 	SwgCuiWebBrowserManager::remove();
-	SwgCuiTcgManager::remove ();
+	//SwgCuiTcgManager::remove ();
 	SwgCuiQuestHelper::remove ();
 	SwgCuiAvatarCreationHelper::remove ();
 	SwgCuiMediatorFactorySetup::remove ();
@@ -549,7 +549,7 @@ void SwgCuiManager::update (float deltaTimeSecs)
 	UNREF (deltaTimeSecs);
 
 	SwgCuiWebBrowserManager::update(deltaTimeSecs);
-	SwgCuiTcgManager::update(deltaTimeSecs);
+	//SwgCuiTcgManager::update(deltaTimeSecs);
 	
 	if (s_checkHud)
 	{

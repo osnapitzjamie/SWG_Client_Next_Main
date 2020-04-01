@@ -74,8 +74,8 @@ void SwgCuiHarassmentMessage::OnButtonPressed(UIWidget *context)
 	{
 		if(m_fromKBSearch)
 		{
-			SwgCuiTicketSubmission::NewTicket::setTicketSubmissionEnabled(true);
-			IGNORE_RETURN(CuiActionManager::performAction (CuiActions::ticketSubmission, Unicode::emptyString));
+			//SwgCuiTicketSubmission::NewTicket::setTicketSubmissionEnabled(true);
+			//IGNORE_RETURN(CuiActionManager::performAction (CuiActions::ticketSubmission, Unicode::emptyString));
 		}
 		else
 		{

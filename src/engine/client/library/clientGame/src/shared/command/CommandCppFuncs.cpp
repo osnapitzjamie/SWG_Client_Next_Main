@@ -2452,7 +2452,7 @@ void CommandCppFuncsNamespace::commandFuncVoiceKick(Command const &, NetworkId c
 
 void CommandCppFuncsNamespace::commandFuncTcg(Command const & , NetworkId const & , NetworkId const & , Unicode::String const & params)
 {
-	CuiActionManager::performAction(CuiActions::tcg, params);
+	CuiSystemMessageManager::sendFakeSystemMessage(Unicode::narrowToWide("This feature is not available."));
 }
 
 //----------------------------------------------------------------------

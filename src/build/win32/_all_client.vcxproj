@@ -138,6 +138,9 @@
       <TypeLibraryName>./_all_client.tlb</TypeLibraryName>
       <HeaderFileName />
     </Midl>
+    <CustomBuild>
+      <LinkObjects>false</LinkObjects>
+    </CustomBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>

@@ -200,7 +200,7 @@ namespace CuiActions
 	MAKE_ACTION(questHelper);
 	MAKE_ACTION(roadmap);
 	MAKE_ACTION(expertise);
-	MAKE_ACTION(ticketSubmission);
+	//MAKE_ACTION(ticketSubmission);
 	MAKE_ACTION(harassmentMessage);             // displayed right before the normal harassment form
 	MAKE_ACTION(harassmentMessageFromKBSearch); // displayed before a ticket submittal from a 'Community Standards' category search
 	MAKE_ACTION(droidCommand);
@@ -257,7 +257,7 @@ namespace CuiActions
 	MAKE_ACTION(collections);
 	MAKE_ACTION(myCollections);
 	MAKE_ACTION(sendSavedPlayerInterestsToServer);
-	MAKE_ACTION(tcg);
+	//MAKE_ACTION(tcg);
 	MAKE_ACTION(appearanceTab);
 	MAKE_ACTION(questBuilder);
 	MAKE_ACTION(rating);

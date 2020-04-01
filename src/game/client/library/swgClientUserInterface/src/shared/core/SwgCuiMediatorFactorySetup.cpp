@@ -125,7 +125,7 @@
 #include "swgClientUserInterface/SwgCuiSpaceZoneMap.h"
 #include "swgClientUserInterface/SwgCuiSplash.h"
 #include "swgClientUserInterface/SwgCuiStructurePlacement.h"
-#include "swgClientUserInterface/SwgCuiTcgWindow.h"
+//#include "swgClientUserInterface/SwgCuiTcgWindow.h"
 #include "swgClientUserInterface/SwgCuiTicketPurchase.h"
 #include "swgClientUserInterface/SwgCuiTrade.h"
 #include "swgClientUserInterface/SwgCuiVendor.h"
@@ -259,7 +259,7 @@ void SwgCuiMediatorFactorySetup::install ()
 	MAKE_SWG_CTOR_WS (Collections,                    "/pda.Collections");
 	MAKE_SWG_CTOR_WS (VoiceFlyBar,                    "/Voice.VoiceFlyBar");
 	MAKE_SWG_CTOR_WS (VoiceActiveSpeakers,            "/Voice.VoiceActiveSpeakers");
-	MAKE_SWG_CTOR_WS (TcgWindow,                      "/pda.Tcg");
+	//MAKE_SWG_CTOR_WS (TcgWindow,                      "/pda.Tcg");
 	MAKE_SWG_CTOR_WS (Mahjong,                        "/pda.Mahjong");
 	MAKE_SWG_CTOR_WS (AppearanceTab,                  "/pda.AppearanceTab");
 	MAKE_SWG_CTOR_WS (QuestBuilder,					  "/pda.QuestBuilder");
@@ -290,7 +290,7 @@ void SwgCuiMediatorFactorySetup::install ()
 
 	CuiMediatorFactory::addConstructor (CuiMediatorTypes::WS_TicketListAddComment, new CuiMediatorFactory::Constructor <SwgCuiService::TicketList::AddComment> ("/PDA.Service.edit", true));
 	MAKE_SWG_CTOR (ResourceSplitter,                  "/pda.SplitResource.main");
-	MAKE_SWG_CTOR_WS (HarassmentReport,               "/pda.Service.harassment");
+	//MAKE_SWG_CTOR_WS (HarassmentReport,               "/pda.Service.harassment");
 	
 	MAKE_SWG_CTOR_WS (IMEIndicator,                   "/pda.ime");
 	MAKE_SWG_CTOR_WS (IMEIndicatorSpace,              "/pda.imeSpace");
